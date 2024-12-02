@@ -1,14 +1,5 @@
-import type { Metadata } from "next"
-import { Inter } from "next/font/google"
-import "./globals.css"
+import "@/app/globals.css"
 import { ThemeProvider } from "@/components/theme-provider"
-
-const inter = Inter({ subsets: ["latin"] })
-
-export const metadata: Metadata = {
-  title: "Positionary - Find Your Next Career Opportunity",
-  description: "Discover job opportunities across multiple platforms in one place",
-}
 
 export default function RootLayout({
   children,
@@ -16,8 +7,8 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en" suppressHydrationWarning>
-      <body className={inter.className}>
+    <html lang="en">
+      <body>
         <ThemeProvider
           attribute="class"
           defaultTheme="system"
